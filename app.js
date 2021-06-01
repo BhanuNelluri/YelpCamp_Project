@@ -113,7 +113,7 @@ app.use((err, req, res, next) => {
     if (!err.message) err.message = "Something went wrong";
     res.status(statusCode).render("campgrounds/error", { err });
 })
-
-app.listen(4000, () => {
-    console.log("Welcome to server : 4000");
+const port = 4000 || process.env.PORT;
+app.listen(port, () => {
+    console.log(`Welcome to server : ${port}`);
 })
