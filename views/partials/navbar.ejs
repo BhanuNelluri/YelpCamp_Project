@@ -13,9 +13,12 @@
             </div>
             <div class="navbar-nav ms-auto">
                 <% if(!currentUser){ %>
-                    <a class="nav-link" href="/register">SignIn</a>
-                    <a class="nav-link" href="/login">LogIn</a>
+                    <a class="nav-link" href="/register">Sig Up</a>
+                    <a class="nav-link" href="/login">Log In</a>
                     <% }else{ %>
+                        <a class="nav-link" href="#">
+                            <%= currentUser.username %>
+                        </a>
                         <a class="nav-link" href="/logout">LogOut</a>
                         <% } %>
             </div>
